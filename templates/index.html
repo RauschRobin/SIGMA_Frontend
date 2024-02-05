@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scribble2Photo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="content">
+        <div class="center">
+            <div class="container">
+                <div class="sidebar">
+                    <h1>Draw Tools</h1>
+                    <button class="tool active" id="pen-tool">Pen</button>
+                    <button class="tool" id="eraser-tool">Eraser</button>
+                </div>
+                <div class="drawing-area">
+                    <canvas id="canvas" width="600" height="400"></canvas>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="clear-button">Clear</button>
+                <form id="image-form" method="post" action="/process_image">
+                    <input type="hidden" id="image-data" name="image_data">
+                    <button type="submit" id="save-button">Transform</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

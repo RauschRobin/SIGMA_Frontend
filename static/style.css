@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #181818;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    width: 70vw;
+}
+
+.container {
+    width: 70vw;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 220px;
+    height: 400px;
+    background-color: #323232;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.button-container {
+    width: 70vw;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.button-container button {
+    margin-left: 20px;
+}
+
+.drawing-area {
+    position: relative;
+}
+
+canvas {
+    border: none;
+    background-color: #fff;
+}
+
+button {
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #169946; /* Slightly darker green on hover */
+}
+
+button:active {
+    background-color: #118238; /* Even darker green on click */
+}
+
+.tool {
+    width: 120px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.tool:hover {
+    background-color: #555;
+}
+
+.tool.active {
+    background-color: #1DB954; /* Spotify green */
+}
+
+#clear-button {
+    min-width: 140px;
+    padding: 10px 15px;
+    background-color: #1DB954; /* Choose a different color for the clear button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#clear-button:hover {
+    background-color: #168f41; /* Slightly darker color on hover */
+}
+
+#clear-button:active {
+    background-color: #136b32; /* Even darker color on click */
+}
+
+#save-button {
+    min-width: 140px;
+    padding: 10px 15px;
+    background-color: #109a10; /* Choose a different color for the clear button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#save-button:hover {
+    background-color: #0d730d; /* Slightly darker color on hover */
+}
+
+#save-button:active {
+    background-color: #095809; /* Even darker color on click */
+}

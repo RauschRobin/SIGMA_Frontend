@@ -1,0 +1,46 @@
+/* result.css */
+/* Apply styles to the entire body of the result page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #181818;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the headings */
+h1 {
+    color: #1DB954;
+}
+
+h2 {
+    color: #1DB954;
+}
+
+/* Style the images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the download button */
+button {
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #169946; /* Slightly darker green on hover */
+}
+
+button:active {
+    background-color: #118238; /* Even darker green on click */
+}

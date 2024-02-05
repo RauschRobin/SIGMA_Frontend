@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <h1>Image Result</h1>
+    <h2>Before Edit:</h2>
+    <img src="{{ before_image }}" alt="Before Edit">
+
+    <h2>After Edit:</h2>
+    <img src="{{ after_image }}" alt="After Edit">
+
+    <a href="{{ download_url }}" download="edited_image.png">
+        <button>Download Edited Image</button>
+    </a>
+</body>
+</html>
