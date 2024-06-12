@@ -44,3 +44,42 @@ button:hover {
 button:active {
     background-color: #118238; /* Even darker green on click */
 }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-wrapper {
+    margin: 20px;
+    text-align: center;
+}
+
+.image-wrapper h2 {
+    margin-bottom: 10px;
+}
+
+.image-wrapper img {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.download-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-button button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.download-button button:hover {
+    background-color: #45a049;
+}
