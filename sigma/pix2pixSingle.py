@@ -2,9 +2,7 @@ import tensorflow as tf
 from matplotlib import pyplot as plt
 import os
 
-
 class Sigma():
-
     @staticmethod
     def load_and_preprocess_single_image(image_path, img_height=512, img_width=512):
         # Read and decode the image from the file path
@@ -128,16 +126,3 @@ class Sigma():
         plt.close()  # Close the plot to free memory
             
         return output_path
-
-if __name__ == "__main__":
-    sigma = Sigma()
-    generator = sigma.generator()
-    generator_optimizer = tf.keras.optimizers.Adam(2e-4, beta_1=0.5)
-
-    checkpoint = tf.train.Checkpoint(generator_optimizer=generator_optimizer, generator=generator)
-    checkpoint_dir = './training_checkpoints'
-    checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
-
-    img_path = 'C:\\Users\\DEBIEMASL\\OneDrive - Durr Group\\Dokumente\\Projekte\\Studienarbeit\\test_images\\drawing2.jpeg'
-    img_name = "drawing2"
-    sigma.generate_single_image(generator, img_path, img_name)

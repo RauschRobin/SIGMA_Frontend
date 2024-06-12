@@ -6,15 +6,27 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
 </head>
 <body>
-    <h1>Image Result</h1>
-    <h2>Before Edit:</h2>
-    <img src="{{ before_image }}" alt="Before Edit">
-
-    <h2>After Edit:</h2>
-    <img src="{{ after_image }}" alt="After Edit">
-
-    <a href="{{ download_url }}" download="edited_image.png">
-        <button>Download Edited Image</button>
-    </a>
+    <h1 style="margin-left: 20px;">Results</h1>
+    <div class="image-container">
+        <div class="image-wrapper">
+            <h2>Before Edit:</h2>
+            <img src="{{ before_image }}" alt="Before Edit">
+        </div>
+        <div class="image-wrapper">
+            <h2>After Edit:</h2>
+            <img src="{{ after_image }}" alt="After Edit">
+        </div>
+    </div>
+    <div class="download-button">
+        <a href="{{ download_url }}" download="edited_image.png">
+            <button>Download Edited Image</button>
+        </a>
+        <button onclick="location.href='/'">Back</button>
+    </div>
+    <div style="margin-left: 20px;">
+        <h2>Rate Result:</h2>
+        <button onclick="location.href='/rateResults/{{1}}'">Good</button>
+        <button onclick="location.href='/rateResults/{{0}}'">Bad</button>
+    </div>
 </body>
 </html>
