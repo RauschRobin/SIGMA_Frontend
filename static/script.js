@@ -47,12 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
             drawingStack.push(imageData);
     
             // Clear the redo stack when a new drawing action occurs
-            redoStack.length = 0;
+            //redoStack.length = 0;
+            redoStack = [];
         }
     }
 
     undoButton.addEventListener("click", function () {
         console.log(drawingStack.length)
+
+        // Select pen tool
+        document.getElementById("pen-tool").click();
 
         if (drawingStack.length > 1) {
             // Pop the current drawing from the stack
